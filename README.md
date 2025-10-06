@@ -1,73 +1,157 @@
-# Welcome to your Lovable project
+# 🚀 Rafael Lopes - Portfolio Website
 
-## Project info
+> A modern, full-stack portfolio website showcasing my web development expertise and projects.
 
-**URL**: https://lovable.dev/projects/5e990053-01f7-492f-96e5-5a1883b2fd4c
+**Live Demo**: [View Portfolio](https://your-portfolio-url.railway.app) | **API Docs**: [FastAPI Documentation](https://your-portfolio-url.railway.app/docs)
 
-## How can I edit this code?
+![Portfolio Preview](./src/assets/developer-hero.jpg)
 
-There are several ways of editing your application.
+## 💼 About This Project
 
-**Use Lovable**
+This portfolio website demonstrates my proficiency in modern web development technologies, featuring a full-stack architecture with responsive design, API integration, and production-ready deployment. Built to showcase both frontend aesthetics and backend functionality.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5e990053-01f7-492f-96e5-5a1883b2fd4c) and start prompting.
+## 🛠️ Tech Stack & Skills Demonstrated
 
-Changes made via Lovable will be committed automatically to this repo.
+### Frontend Development
+- **⚛️ React 18** - Modern functional components with hooks
+- **🎨 TypeScript** - Type-safe development with strict typing
+- **💨 Vite** - Lightning-fast build tool and development server
+- **🎭 Tailwind CSS** - Utility-first CSS framework for responsive design
+- **🧩 shadcn/ui** - High-quality, accessible component library
+- **📱 Responsive Design** - Mobile-first approach with modern CSS techniques
 
-**Use your preferred IDE**
+### Backend Development
+- **🐍 Python 3.11** - Modern Python with FastAPI framework
+- **🚀 FastAPI** - High-performance async API with automatic documentation
+- **📝 Pydantic** - Data validation and serialization with type hints
+- **🔧 Uvicorn** - ASGI server for production-ready performance
+- **🌐 CORS** - Cross-origin resource sharing configuration
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Development & Deployment
+- **🐳 Docker** - Multi-stage containerization for optimized builds
+- **🚂 Railway** - Cloud deployment with automatic CI/CD
+- **📦 npm/Node.js** - Package management and build processes
+- **🔄 Git** - Version control with clean commit history
+- **⚙️ Environment Management** - Secure configuration handling
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Architecture & Best Practices
+- **🏗️ Full-Stack Integration** - Seamless frontend-backend communication
+- **📊 RESTful API Design** - Well-structured endpoints with proper HTTP methods
+- **🔒 Security** - Environment variable protection and CORS configuration
+- **📈 Performance** - Optimized builds and efficient static file serving
+- **🧪 Type Safety** - End-to-end TypeScript for robust development
 
-Follow these steps:
+## 🌟 Key Features
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 🎯 Professional Portfolio Sections
+- **Hero Section** - Dynamic introduction with call-to-action
+- **About Me** - Professional background and expertise
+- **Skills Display** - Interactive showcase of technical abilities
+- **Project Gallery** - Featured work with live demos and GitHub links
+- **Contact Form** - Functional contact system with backend integration
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 🔧 Technical Highlights
+- **Smooth Scrolling Navigation** - Fixed navbar with offset-aware scrolling
+- **Responsive Grid Layouts** - CSS Grid and Flexbox mastery
+- **API Integration** - Real-time data fetching and form submissions
+- **Component Architecture** - Reusable, maintainable React components
+- **Type-Safe Development** - Full TypeScript implementation
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 🚀 Production Features
+- **Health Monitoring** - API health checks for uptime monitoring
+- **Static File Serving** - Efficient frontend delivery through FastAPI
+- **Environment Configuration** - Development/production environment handling
+- **Docker Optimization** - Multi-stage builds for minimal image size
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🏃‍♂️ Quick Start
+
+### Prerequisites
+- Node.js 18+ and npm
+- Python 3.11+
+- Git
+
+### Development Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/RafaelLopesPinheiro/My-landpage-main.git
+cd My-landpage-main
+
+# Install frontend dependencies
+npm install
+
+# Start frontend development server
 npm run dev
+
+# In a new terminal, start backend server
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
 ```
 
-**Edit a file directly in GitHub**
+### 🌐 Access Points
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:8000
+- **API Documentation**: http://localhost:8000/docs
+- **Health Check**: http://localhost:8000/health
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📁 Project Structure
 
-**Use GitHub Codespaces**
+```
+├── src/                    # React frontend source
+│   ├── components/         # Reusable UI components
+│   ├── pages/             # Page components
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Utility functions
+│   └── assets/            # Images and static files
+├── backend/               # Python FastAPI backend
+│   └── app/               # Application code
+│       ├── main.py        # FastAPI application
+│       ├── routers/       # API route handlers
+│       └── schemas.py     # Pydantic data models
+├── Dockerfile             # Multi-stage production build
+├── railway.toml          # Railway deployment configuration
+└── package.json          # Frontend dependencies and scripts
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🚀 Deployment
 
-## What technologies are used for this project?
+This project is configured for seamless deployment on Railway with Docker:
 
-This project is built with:
+```bash
+# Deploy to Railway
+railway login
+railway link
+railway up
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The application uses a multi-stage Docker build that:
+1. Builds the React frontend with Vite
+2. Sets up Python backend with FastAPI
+3. Serves frontend static files through the backend
+4. Includes health monitoring and environment configuration
 
-## How can I deploy this project?
+## 🔗 API Endpoints
 
-Simply open [Lovable](https://lovable.dev/projects/5e990053-01f7-492f-96e5-5a1883b2fd4c) and click on Share -> Publish.
+- `GET /` - Serve React application
+- `GET /health` - Application health check
+- `GET /api/*` - API routes (extensible for future features)
+- `GET /docs` - Interactive API documentation
 
-## Can I connect a custom domain to my Lovable project?
+## 🎨 Design Philosophy
 
-Yes, you can!
+This portfolio emphasizes:
+- **Clean, Modern UI** - Professional aesthetic with attention to detail
+- **Performance First** - Optimized loading and smooth interactions
+- **Accessibility** - Semantic HTML and ARIA compliance
+- **Scalability** - Modular architecture for easy feature additions
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 👨‍💻 Developer
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+**Rafael Lopes** - Full-Stack Developer
+
+Passionate about creating efficient, scalable web applications with modern technologies. This portfolio demonstrates my expertise in both frontend aesthetics and backend architecture.
+
+---
+
+*This project showcases modern web development practices including React, TypeScript, FastAPI, Docker, and cloud deployment. It represents my ability to deliver complete, production-ready applications from concept to deployment.*
