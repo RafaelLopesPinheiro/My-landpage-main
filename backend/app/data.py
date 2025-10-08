@@ -19,14 +19,14 @@ PROJECTS_DATA = [
         )
     ),
     Project(
-        title="Estratégias Long & Short",
-        description="Análise quantitativa para estratégias de investimento long e short no mercado financeiro. Implementação de modelos estatísticos para análise de performance e otimização de portfólio.",
+        title="Web Development",
+        description="Desenvolvimento de aplicações web responsivas e escaláveis, utilizando as mais recentes tecnologias e frameworks.",
         image="/placeholder.svg",
-        tags=["Python", "Análise Financeira", "Estatística", "NumPy"],
+        tags=["JavaScript", "React", "Node.js", "CSS", "Python"],
         icon="Globe",
         links=ProjectLinks(
             live="#",
-            github="https://github.com/RafaelLopesPinheiro/Long_and_short"
+            github="https://github.com/RafaelLopesPinheiro/My-landpage-main"
         )
     ),
     Project(
