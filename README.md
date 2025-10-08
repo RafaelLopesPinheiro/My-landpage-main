@@ -4,7 +4,7 @@
 
 **Live Demo**: [View Portfolio](https://your-portfolio-url.railway.app) | **API Docs**: [FastAPI Documentation](https://your-portfolio-url.railway.app/docs)
 
-![Portfolio Preview](./src/assets/developer-hero.jpg)
+![Portfolio Preview](./src/assets/top11.png)
 
 ## 💼 About This Project
 
