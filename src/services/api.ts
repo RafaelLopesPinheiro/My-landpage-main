@@ -2,19 +2,18 @@
 // This file provides functions to fetch data from the backend API
 
 // Automatically detect environment and use appropriate API URL
-const API_BASE_URL = import.meta.env.PROD 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
   ? '/api'  // In production, backend serves from same origin
   : 'http://localhost:8000/api';  // In development, use local backend
 
 // Generic fetch function with error handling
 async function apiRequest(endpoint: string, options: RequestInit = {}) {
   try {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-      headers: {
-        'Content-Type': 'application/json',
-        ...options.headers,
-      },
-      ...options,
+    
+    const response = await fetch(`${API_URL}/api/contact`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
     });
 
     if (!response.ok) {

@@ -14,7 +14,11 @@ origins = os.getenv("CORS_ORIGINS", "*").split(",")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[o.strip() for o in origins if o.strip()],
+    allow_origins=[
+        "https://rafaellopespinheiro.github.io",  # Your GitHub Pages domain
+        "http://localhost:5173",  # Local development
+        "http://localhost:8080",  # Your dev server
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
