@@ -15,7 +15,7 @@ origins = os.getenv("CORS_ORIGINS", "*").split(",")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://rafaellopespinheiro.github.io/My-landpage-main/",
+        "https://rafaellopespinheiro.github.io",
         "http://localhost:5173",
         "http://localhost:8080",
     ],
