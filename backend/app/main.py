@@ -15,9 +15,9 @@ origins = os.getenv("CORS_ORIGINS", "*").split(",")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://rafaellopespinheiro.github.io",  # Your GitHub Pages domain
-        "http://localhost:5173",  # Local development
-        "http://localhost:8080",  # Your dev server
+        "https://rafaellopespinheiro.github.io/My-landpage-main/",
+        "http://localhost:5173",
+        "http://localhost:8080",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -28,34 +28,22 @@ app.add_middleware(
 from app.routers import root
 app.include_router(root.router, prefix="/api")
 
-# Serve static files (built React app) in production
+# Serve static files (built React app)
 static_dir = "static"
 if os.path.exists(static_dir):
-    # Mount static assets with proper caching
     app.mount("/assets", StaticFiles(directory=f"{static_dir}/assets"), name="assets")
     
     @app.get("/")
     async def serve_frontend():
-        """Serve the main React app"""
         return FileResponse(f"{static_dir}/index.html")
     
     @app.get("/{full_path:path}")
     async def serve_spa(full_path: str):
-        """Serve React app for all non-API routes (SPA routing)"""
-        # Don't intercept API routes
         if full_path.startswith("api/"):
             return
         
-        # Check if it's a static file request
         file_path = f"{static_dir}/{full_path}"
         if os.path.isfile(file_path):
             return FileResponse(file_path)
             
-        # Serve index.html for all other routes (SPA)
         return FileResponse(f"{static_dir}/index.html")
-
-# Health check endpoint for Railway
-@app.get("/health")
-async def health_check():
-    """Health check for Railway and monitoring"""
-    return {"status": "healthy", "service": "Rafael Lopes Portfolio"}
